@@ -12,6 +12,7 @@
       <config projectName="bldc" targetName="debug-start" />
       <config projectName="bldc" targetName="POST_MAKE_ALL_RULE_HOOK" />
       <config projectName="bldc" targetName="upload-pi" />
+      <config projectName="bldc" targetName="upload_only" />
       <config projectName="bldc" targetName="build" />
       <config projectName="bldc" targetName="upload-olimex" />
       <config projectName="bldc" targetName="upload-pi-remote" />
@@ -25,9 +26,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a65eb43f-e36c-45c9-bc3b-94b7eaacf8ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a380e909-2b80-4b04-80a6-049451e43ab8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/applications/custom_comm_can.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/custom_comm_can.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/custom_types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/custom_utils.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/custom_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_2_21,_9_20_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_2_21,_9_20_PM_[Default_Changelist]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_2_21__9_20_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/app.c" beforeDir="false" afterPath="$PROJECT_DIR$/applications/app.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/app.h" beforeDir="false" afterPath="$PROJECT_DIR$/applications/app.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/app_custom.c" beforeDir="false" afterPath="$PROJECT_DIR$/applications/app_custom.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/applications.mk" beforeDir="false" afterPath="$PROJECT_DIR$/applications/applications.mk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +53,6 @@
       <option value="directory" />
     </option>
   </component>
-  <component name="ClangdSettings">
-    <option name="clangTidyViaClangd" value="false" />
-    <option name="formatViaClangd" value="false" />
-    <option name="clangWarnings" value="-Wno-unused-variable,-Wno-infinite-recursion,-Werror=implicit-function-declaratio,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wuninitialized,-Wunused-label,-Wunused-lambda-capture,-Wno-double-promotion,-Wno-absolute-value,-Wno-enum-conversion" />
-  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -52,11 +61,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="MakefileLocalSettings">
-    <option name="toolchainName" value="gcc-arm-none-embi-9" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -83,8 +99,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectId" id="1mSwPhCVHH0u6k70z1YdD8Qb3x0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1qWNbmRnmRgLIcTJQoEj5zstXW6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -92,17 +107,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CppTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Makefile" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Makefile Application.all">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
@@ -175,9 +190,9 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -197,27 +212,36 @@
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
-    <myIsUseDefaultProxy>true</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a65eb43f-e36c-45c9-bc3b-94b7eaacf8ae" name="Default Changelist" comment="" />
-      <created>1609500279492</created>
+      <changelist id="a380e909-2b80-4b04-80a6-049451e43ab8" name="Default Changelist" comment="" />
+      <created>1617191460399</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609500279492</updated>
-      <workItem from="1609500281564" duration="6914000" />
-      <workItem from="1609510613705" duration="5041000" />
-      <workItem from="1609515662201" duration="30000" />
-      <workItem from="1609515699597" duration="159000" />
-      <workItem from="1609515866362" duration="6000" />
-      <workItem from="1609516644869" duration="3000" />
-      <workItem from="1609554913177" duration="2064000" />
-      <workItem from="1609560169676" duration="8580000" />
-      <workItem from="1609592538687" duration="887000" />
+      <updated>1617191460399</updated>
+      <workItem from="1617191462116" duration="2434000" />
+      <workItem from="1617206129372" duration="157000" />
+      <workItem from="1617206301639" duration="4244000" />
+      <workItem from="1617244559114" duration="6000" />
+      <workItem from="1617256711060" duration="820000" />
+      <workItem from="1617269833568" duration="719000" />
+      <workItem from="1617270557282" duration="9000" />
+      <workItem from="1617270756577" duration="642000" />
+      <workItem from="1617339867921" duration="20000" />
+      <workItem from="1617384916940" duration="4450000" />
+      <workItem from="1617776424936" duration="15478000" />
+      <workItem from="1617864350538" duration="57000" />
+      <workItem from="1617864414036" duration="10000" />
+      <workItem from="1617864429482" duration="16449000" />
     </task>
+    <task id="LOCAL-00001" summary="Formatting">
+      <created>1617897254610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617897254610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,8 +259,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting" />
   </component>
 </project>

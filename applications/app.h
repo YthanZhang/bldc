@@ -81,4 +81,10 @@ void app_custom_start(void);
 void app_custom_stop(void);
 void app_custom_configure(app_configuration *conf);
 
+
+// Custom weight lift threads
+void customWeightLiftInit(void);
+void customWeightLiftStop(void);
+
+
 #endif /* APP_H_ */
