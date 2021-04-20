@@ -27,58 +27,7 @@ struct Button
 };
 
 
-void privateButton_updatePressed(struct Button* button, uint32_t button_input)
-{
-    if (button_input)
-    {
-        if (button->pressed)
-        {
-            ++(button->pressCounter);
-        }
-        else
-        {
-            button->pressed = true;
-        }
-    }
-    else
-    {
-        button->pressed      = false;
-        button->pressUsed    = false;
-        button->pressCounter = 0;
-    }
-}
 
-bool privateButton_isPressed(struct Button* button) { return button->pressed; }
-
-bool privateButton_isHold(struct Button* button)
-{
-    return button->pressCounter > button->holdThreshold;
-}
-
-uint32_t privateButton_getPressCounter(struct Button* button)
-{
-    return button->pressCounter;
-}
-
-uint32_t privateButton_setHoldThreshold(struct Button* button,
-                                        uint32_t newHoldThreshold)
-{
-    return button->holdThreshold = newHoldThreshold;
-}
-
-uint32_t privateButton_getHoldThreshold(struct Button* button)
-{
-    return button->holdThreshold;
-}
-
-bool privateButton_pressUsed(struct Button* button)
-{
-    return button->pressUsed;
-}
-void privateButton_usePress(struct Button* button)
-{
-    button->pressUsed = button->pressed;
-}
 
 
 struct Button_handle
@@ -109,36 +58,15 @@ struct Button_handle
     void (*const usePress)(struct Button* button);
 };
 
-const struct Button_handle buttonHandler = {
-    .updatePressed    = privateButton_updatePressed,
-    .isPressed        = privateButton_isPressed,
-    .isHold           = privateButton_isHold,
-    .getPressCounter  = privateButton_getPressCounter,
-    .setHoldThreshold = privateButton_setHoldThreshold,
-    .getHoldThreshold = privateButton_getHoldThreshold,
-    .pressUsed        = privateButton_pressUsed,
-    .usePress         = privateButton_usePress,
-};
+extern const struct Button_handle buttonHandler;
 
 
-struct Button makeButton(void)
+struct Button makeButton(void);
+
+
+typedef enum enum_RunType
 {
-    struct Button button = {
-        .pressed       = false,
-        .pressUsed     = false,
-        .pressCounter  = 0,
-        .holdThreshold = 0,
-
-        .mfunc = &buttonHandler,
-    };
-
-    return button;
-}
-
-
-typedef enum enum_RunType : uint8_t
-{
-    _blankRun    = 0x00,
+    _blankRun       = 0x00,
     TorqueMode   = 0x01,
     PositionMode = 0x01 << 1,
     SpeedMode    = 0x01 << 2,

@@ -8,6 +8,7 @@ APPSRC =	applications/app.c \
 			applications/app_pas.c \
 			applications/app_custom.c \
 			applications/custom_comm_can.c \
-			applications/custom_utils.c
+			applications/custom_utils.c \
+			applications/custom_types.c
 
 APPINC = applications
